@@ -1,0 +1,6 @@
+*.eep
+*.sh
+*.o
+*.elf
+*.hex
+ldscripts
