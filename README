@@ -1,0 +1,10 @@
+This is reflow oven controller project.
+------------------------------------------
+
+Bootloader is modified avr109 bootloader from some "application note".
+
+Main firmware is written from scratch, and licences under GPLv3.
+
+
+Enjoy.
+
