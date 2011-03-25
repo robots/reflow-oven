@@ -1,0 +1,5 @@
+
+
+Most of the stuff is written from scratch. Except:
+
+- lcd.[ch] - taken from usbprog lcd example program
