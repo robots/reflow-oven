@@ -36,12 +36,12 @@ void pwm_set2(uint8_t in)
 ISR(TIMER0_OVF_vect)
 {
 	pwm_count ++;
-	if (pwm_value1 > pwm_count) {
+	if (pwm_value1 >= pwm_count) {
 		PWM_PORT |= _BV(PWM_1);
 	} else {
 		PWM_PORT &= ~_BV(PWM_1);
 	}
-	if (pwm_value2 > pwm_count) {
+	if (pwm_value2 >= pwm_count) {
 		PWM_PORT |= _BV(PWM_2);
 	} else {
 		PWM_PORT &= ~_BV(PWM_2);
