@@ -1,5 +1,6 @@
 
 
+#include "main.h"
 #include "eeprom.h"
 #include "ramp.h"
 
@@ -19,13 +20,13 @@ static uint16_t ramp_last_temp;
 int16_t ramp_coef[10][2];
 
 int16_t ramp_coef_default[10][2] PROGMEM = {
-	{10, 30},
-	{13, 50},
-	{11, 100},
-	{13, 100},
-	{16, 150},
-	{8, 200},
-	{7, 300},
+	{S2TIME(3),   30}, // ready-set-go :-)
+	{S2TIME(90), 100}, // preheat
+	{S2TIME(90), 185}, // soak
+	{S2TIME(15), 230}, // ramp-up (max 3 degC/sec)
+	{S2TIME(15), 140}, // ramp-down (max 6 degC/sec)
+	{S2TIME(90),  20},
+	{7, -1000},
 	{12, 150},
 	{7, 100},
 	{11, 30},

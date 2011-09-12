@@ -6,6 +6,9 @@
 //Needed by <avr/delay.h>
 #define F_CPU    8000000UL
 
+#define TICKS_PER_SEC 5
+#define S2TIME(x) ((x)*TICKS_PER_SEC)
+
 #define BL_PORT  PORTD
 #define BL_PIN   PD4
 #define BL_ON    BL_PORT |= _BV(BL_PIN)
