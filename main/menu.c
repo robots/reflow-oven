@@ -492,6 +492,9 @@ static void wait_blink()
 
 static void halt_tc_open()
 {
+	pwm_set2(0);
+	pwm_set1(0);
+
 	LCD_cursor(0, 0);
 	LCD_text(" FATAL! ");
 	LCD_cursor(1, 0);
